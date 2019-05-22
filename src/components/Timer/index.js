@@ -1,8 +1,3 @@
-import React from 'react';
-
-const Timer = (props) => {
-	console.log(props);
-	return (<div>Timer!</div>);
-};
+import Timer from './Timer';
 
 export default Timer;

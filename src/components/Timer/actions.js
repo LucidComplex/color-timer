@@ -1,10 +1,23 @@
 const START_TIMER = 'START_TIMER';
-function startTimer(seconds) {
+const STOP_TIMER = 'STOP_TIMER';
+
+const startTimer = seconds => {
+	const currentTime = new Date().getTime();
 	return {
 		type: START_TIMER,
 		seconds,
-		running: true
+		running: true,
+		color: '#FF0000'
 	};
-}
+};
 
-export startTimer;
+const stopTimer = () => {
+	return {
+		type: STOP_TIMER,
+		seconds: 0.7,
+		running: false,
+		color: '#00FF00'
+	}
+};
+
+export { START_TIMER, STOP_TIMER, startTimer, stopTimer };
